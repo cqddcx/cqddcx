@@ -21,7 +21,7 @@
 			});
 		});
 	</script>
-   <script type="text/javascript">   
+   <!-- <script type="text/javascript">   
         function password() {   
         var testV = 1;   
         var pass1 = prompt('请输入密码！','');   
@@ -41,14 +41,14 @@
         return " ";   
         }   
         document.write(password());   
-    </script>
+    </script> -->
    
     <style>
 
         input{
             border:none;
             /* background: #132dc4d5; */
-            color: rgb(0, 0, 0);
+            color: rgb(41, 43, 42);
             width: 180px;;
             font-family:"微软雅黑";
             background: transparent; 
@@ -73,11 +73,14 @@
         }
 
         img{
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
             display: none;
+            margin: 0 auto;
+            box-shadow: 0 1px 20px #ccc;
+    
+        }
+        #tup{
             text-align: center;
-            
         }
         span{
 
@@ -109,7 +112,7 @@
         }
         #gga{
             height: 40px;
-            color: #555555;
+            color: #ff5100;
             font-size: 20px;
             border-radius: 15px;
        }
@@ -132,7 +135,7 @@
 			background-attachment: fixed;
 			background-position: center;
 			background-color: rgba(52, 52, 52, 0.8);
-			background-size: 100%;
+			background-size: 80%;
 		}
 		.wrapper:hover{
 			cursor: zoom-out;
