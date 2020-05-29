@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=66560092" charset="UTF-8"></script>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=66560092" charset="UTF-8"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>活动标识查询</title>
-    <script type="text/javascript">   
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<script>
+		$(function(){
+			$('.tt').click(function(){
+				//查看大图
+				$(this).after("<div class='wrapper'></div>");
+				var imgSrc = $(this).attr('src');
+				$(".wrapper").css("background-image", "url(" + imgSrc + ")");
+				$('.wrapper').fadeIn(1000);
+				//关闭并移除图层
+				$('.wrapper').click(function(){
+					$('.wrapper').fadeOut(1000).remove();
+				});
+			});
+		});
+	</script>
+   <script type="text/javascript">   
         function password() {   
         var testV = 1;   
-        var pass1 = prompt('请输入密码','');   
-        while (testV < 3) {   
+        var pass1 = prompt('请输入密码！','');   
+        while (testV < 9999) {   
         if (!pass1)   
         history.go(-1);   
         if (pass1 == "2020") {  
-        alert('密码正确');   
+        // alert('密码正确,欢迎访问');   
         break;   
         }   
         testV+=1;   
         var pass1 =   
         prompt('密码错误!请重新输入:');   
         }   
-        if (pass1!="password" & testV ==3)   
+        if (pass1!="password" & testV ==9999)   
         history.go(-1);   
         return " ";   
         }   
         document.write(password());   
     </script>
-    
+   
     <style>
 
         input{
             border:none;
             /* background: #132dc4d5; */
             color: rgb(0, 0, 0);
-            width: 200px;;
-            height:20%;
+            width: 180px;;
             font-family:"微软雅黑";
-            background: transparent;
+            background: transparent; 
             border: 1px solid #C9C9C9;
             font-weight:bold;
             font-size: 17px;
             cursor:pointer;
+            text-align: center;
             
         }
         /* .button:focus{
@@ -51,11 +67,16 @@
             color: blue;
             border-color: royalblue;
             }
+        #gga:hover{
+            background-color: rgb(250, 75, 6);
+            color: ghostwhite;
+        }
 
         img{
             width: 100%;
             height: 100%;
             display: none;
+            text-align: center;
             
         }
         span{
@@ -73,13 +94,56 @@
             box-shadow: 0 1px 4px 0 #E6E2E2;
             border-radius: 4px;
             margin-bottom: 32px;
-        } */    
+        } */   
+        .anl{
+            padding: 10px;
+            margin: 20px;
+            text-align: center;
+        } 
+        .gg{ 
+            text-align: center; 
+            border-radius:20px;
+        }
+        #tup{
+            text-align: center; 
+        }
+        #gga{
+            height: 40px;
+            color: #555555;
+            font-size: 20px;
+            border-radius: 15px;
+       }
+       *{
+			margin: 0;
+			padding: 0;
+		}
+		
+		.tt:hover{
+			cursor: zoom-in;
+		}
+		.wrapper{
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 999;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			background-color: rgba(52, 52, 52, 0.8);
+			background-size: 100%;
+		}
+		.wrapper:hover{
+			cursor: zoom-out;
+		}
     </style>
 </head>
 <body>
-    <p><input type="button" value="查看公告" onclick="MsgBox()" style="color: rgb(248, 248, 248);background-color: tomato;"/></p>
+    <div class="gg">
+        <input id="gga" type="button" value="查看公告" onclick="MsgBox()";/>   
+    </div>
     <div class="anl">
-        <!-- 这里input 调用了2个onclick事件 -->
         <span id="a1"><input type="button" value="超跑牛卡" onclick="obj=document.getElementById('cqdd10');obj.style.display=obj.style.display=='block'?'':'block';"/> </span>
         <span id="a2"><input type="button" value="百果园王卡"  onclick="obj=document.getElementById('cqdd7');obj.style.display=obj.style.display=='block'?'':'block'"/>  </span>
         <span id="a3"><input type="button" value="视频类会员" onclick="obj=document.getElementById('cqdd4');obj.style.display=obj.style.display=='block'?'':'block'"/>  </span>
@@ -120,40 +184,40 @@
 
     <div id="tup" >
 
-        <img id="cqdd1" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3DC94*yXLJdGcC1AiqL6pOJxDa5zu9.h1TY.DKDxhuSgpglmPVia1LeAplrdl.w9uwoEJuX*ne7E15ApHyKcq8M!/r" alt="" title="QQ会员3个月"/>
-        <img id="cqdd2" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3KzgyRbStrtDS.TtMfuy*v6Maz0K1BRcuExl662B.p3nXqhkxDEYKa8E*tjq*kd7y5P.VPGpcbsKJunJsgSm6eQ!/r" alt="" title="5G超级会员黄金版"/>
-        <img id="cqdd3" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3G6YePu6Vq8mulxW9x.2vevGonmO92KmjlINddsDdVTVhrazd7cW3X*I3JwyejAGUMQz32wPOnojhK8d6qFi6vQ!/r" alt="" title="QQ超级会员6个月"/>
-        <img id="cqdd4" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3CwNJNFNXMxjiGg.7Qse9C8LZBNPVpqUjq8xAA.msLr*buaN3aU0SKFIh*o3bqbcaUAEQgahFM7PoB3HtqLsm2c!/r" alt="" title="视频类会员"/>
-        <img id="cqdd5" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3Kgf0cKVWXUxRWAFTOWpcmiiM1ILwUy6*Zs19R5O4qljNds*9pOQ9lTGhP0rCLfWRFTePZoEvDlljqqWAXSB1D4!/r" alt="" title="QQ音乐推广"/>
-        <img id="cqdd6" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3INR3GGW0j3o2rib1ZJbOlIrg2iHN9KpGTfLOxjcZQcdeIfKkvu4dlgvqsfcX7tzLIcMFnTOSxPkD1EyHIWPAmg!/r" alt="" title="QQ会员（鲜花）"/>
-        <img id="cqdd7" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3JEv7LxdTrlQfDEf0YgSY4LkM.zNBg9hlQXHWd9.RW.Nw0ROBRtqKgNU6DdHxtchEulpuctlKn8Y9mOiQIJM.tc!/r" alt="" title="百果园王卡"/>
-        <img id="cqdd8" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3JUukdQvYhuynYW9io*Mosxa.6uiNe.ptu5HXAfVbCygLp7Kdpu*Wweod1jdjmecTohkVhvw.86EbZLCBYeMC0Q!/r" alt="" title="超级会员全家桶"/>
-        <img id="cqdd9" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3O5o.LD6UleebNg2yzgyq*bTLsxecEMACBbTtJHIJNKo*ZaE8Zc2rYauKKXlpeo*UmKtLKTNAJJMoSFIqRGT.nY!/r" alt="" title="超级会员黄金版"/>
-        <img id="cqdd10" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3J73hiYGTlcXRTAPBAKXQ8i0LvUnlD1nbZ4bpJ63i*ZOPRlSG0uzcQrNnlVbUkq1iZ22MG31Gz4KHZck.8NazY4!/r" alt="" title="超跑牛卡"/>
-        <img id="cqdd11" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3AesYIGNZ9MWc7Ebz9L.*8nPBTeTZLQSOwUMOt4cNMpvw94CQpE.8GjPq9hxX0DPCC3gBLfD0OrpJK4XjmQGZqE!/r" alt="" title="春节-12个月超会"/>
-        <img id="cqdd12" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3JazaUKkWI5KdVcPsWwIhD.hagNCX3k6GJbtj.hA8HTb5NlfDJkj8mRPjBElkdFOMjNYuHs4Y0Hc92Xnw0sDI.o!/r" alt="" title="抖音春节50元话费"/>
-        <img id="cqdd13" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3Ew1Gj.JzXMIwNxDkCfc3p77K*8uBzHNGYSryakG1cr7rexvMNq3LNhfBnGHb9zOoLotz5HFpJ0TmFScaH8EvmM!/r" alt="" title="春节腾讯视频VIP"/>
-        <img id="cqdd14" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3HfW6dMwOlYo3IMpq5mAvQK.FOP00qO2d3mdhy4upJXFkNRU3sOQKnb*G8PRPCfNgdGMgZaM0qU56C2sFPJf0Pw!/r" alt="" title="春节优酷VIP"/>
-        <img id="cqdd15" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3FrbyXbB4oRfZpYrRRkRY6TKnU0YFYGHR5fG7xhgi1P5K6FG7CHxaPoXiI1YXBaVE8d3XdkPO2tKo1Xsl7vmhAI!/r" alt="" title="大王超会"/>
-        <img id="cqdd16" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3AfkjGtzy3.5BErvIO07Z2olwl3Gtsc6XAO7B08MZf82aPhf1FOs43Asfbp3vsdN0X46wW*FKnEBrRII.LrHJAw!/r" alt="" title="分期乐活动"/>
-        <img id="cqdd17" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3KMsf635V2jtKjIqYw6*Z83WvHtH8NXEAYdvm2eMZxKS9kdWVq8pTHHwo4YbXga7VlVmsdFotOGbUk*BpsqrpCs!/r" alt="" title="含100元礼包"/>
-        <img id="cqdd18" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3F04QPoiPZCnIdpOpzcWSaFOLkRD35lE1zNOEsuedtq41ybH..HSsOMBEXfg7LORoZ5PLAZLhedBTO3CSzyD8CA!/r" alt="" title="互联网权益N选一"/>
-        <img id="cqdd19" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3PATuXh.PLchl7LhcIm2AwP1kHmebqPkgd8Oq3v6UEgwp7rNxv85J373HmJ*rqjGvfHbje2Hj7ZH1ieKzzRZ8a4!/r" alt="" title="锦江专享权益活动"/>
-        <img id="cqdd20" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3A4nYEsCti*VTtYjGsilK8PSnjrviJNJCdDi1wNKrP**eNZB3QtsEsLVd7MxTN8Q2pa83nW1EBXRAfVyC1yv*RA!/r" alt="" title="快手卡限时2400"/>
-        <img id="cqdd21" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3IDJ53A4SQWH4.E49trg03bMoczJakQxVgGqs9o.bQcYVn8PpTYZxUw4J4czfW4QK.XmJs.c7AZQdJ9ArQRBNEw!/r" alt="" title="12个月腾讯视频VIP"/>
-        <img id="cqdd22" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3D7Yh1EH.k*wwChsT.TVsWgslPB2FPPNoSkqwSgtfOeyXUWeGFBYNJLbonbrTuTs74PP92HmVQsmo9va7761E10!/r" alt="" title="3个月腾讯视频VIP"/>
-        <img id="cqdd23" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3OhsgqvPxL0h4h.DT8itUuGPjZo.nMi06OjRHZhG4DPT5DR2Ko.V1gAsERn.DIkeeB2j1x7G5SV*XbBjsLANYF0!/r" alt="" title="领3个月腾讯视频VIP"/>
-        <img id="cqdd24" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3HAcMh36xkQ779LizeQ0w7qRER1esBXipLiDHxpGT113NTdDRJe8RjA.7Dlb5cxYzr9bXJ2Kd6zgg2Jmy4hhWDk!/r" alt="" title="生日王卡超级版"/>
-        <img id="cqdd25" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3GXRfQzWIG7yOEDBV3p6x237T0rSI*iA7r9jAVXl489s*5.BxYTa0I6GXBkJo2OMtCIs36eY1D1Lo5R9aYGAoVY!/r" alt="" title="首充送微云超级会员"/>
-        <img id="cqdd26" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3H4S*HIUpLDjPe7z75vwYErOS05uYKfQhjNk5S86mQnbqw.jsgG36*QvqQ4*SDidUBfaPqtFRhyfGoJwuofnTbk!/r" alt="" title="送QQ超会"/>
-        <img id="cqdd27" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3JzKcmXAIcZOzLAgPTk04yInlBQVA31lv8BuwdicyoFvKApmMlSeWnmua92JlWwCdRSSKThxqBGjM.sETtQWcMw!/r" alt="" title="送豪华绿钻"/>
-        <img id="cqdd28" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3L*rpXguf9uFEiN.qJbDKD9qRJPGO*1DbCInBOHqRWTsUi6uU2xUvAMGXHUyWZVZMDWgL*tp7D4T01W1Dr3*QTA!/r" alt="" title="送酷狗VIP"/>
-        <img id="cqdd29" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3MI7VHKuCkKsHVpeiAmNddiVlGSl9xXfNB*1GYdQW9bEKVHXqTTIYNODDLAg9j1bbJu15DAKAXC67zply5*RBaU!/r" alt="" title="腾讯视频VIP"/>
-        <img id="cqdd30" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3NdX3hI93hNo8KI3IgZrzKZPdyjaGSE*fn8tkBEjocsOtpoO0dTObuNo0DLu38HUM*5LqeKTh6taFvaD0f0MdKo!/r" alt="" title="天神-不首冲"/>
-        <img id="cqdd31" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3MOg.j51tC*lg3wlmjG4yD7GCAYLba.AOJVfe2dvm2H8AurfRwP7SoYd*NlUTkzImDTODp6NyxLWqKxdxveePA0!/r" alt="" title="王卡-不首冲"/>
-        <img id="cqdd32" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3OfA6fooYHyYsUMavJnGgzwmSLsU7uGfxfglt5KuGI6LebkeC0H3UbSgmDrZlkaY21G*Fh17KShPmCOOQUJtZ9o!/r" alt="" title="快手卡享手游加速"/>
-        <img id="cqdd33" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3LmdmSrE62bcdkWEDHRJ7cM4cJhqFSjsJ7O1LYyPut0BOKQ6.70eHjlAkXdi2ybKGKkY7wlxFoZyuwPjUff8qU8!/r" alt="" title="尊享权益包（黄金版）"/>
-        <img id="cqdd34" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3FYF1qCjC7ANaQiTJxWMG9Zu1h7atHDgClq*1jzM3NRtS21nmhnkA*3Ea*IxpHmPhJ*hpwS.0XZn1LV8W*WxjOE!/r" alt="" title="分享礼活动3选1"/>
+        <img class="tt" id="cqdd1" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3DC94*yXLJdGcC1AiqL6pOJxDa5zu9.h1TY.DKDxhuSgpglmPVia1LeAplrdl.w9uwoEJuX*ne7E15ApHyKcq8M!/r" alt="" title="QQ会员3个月"/>
+        <img class="tt" id="cqdd2" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3KzgyRbStrtDS.TtMfuy*v6Maz0K1BRcuExl662B.p3nXqhkxDEYKa8E*tjq*kd7y5P.VPGpcbsKJunJsgSm6eQ!/r" alt="" title="5G超级会员黄金版"/>
+        <img class="tt" id="cqdd3" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3G6YePu6Vq8mulxW9x.2vevGonmO92KmjlINddsDdVTVhrazd7cW3X*I3JwyejAGUMQz32wPOnojhK8d6qFi6vQ!/r" alt="" title="QQ超级会员6个月"/>
+        <img class="tt" id="cqdd4" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3CwNJNFNXMxjiGg.7Qse9C8LZBNPVpqUjq8xAA.msLr*buaN3aU0SKFIh*o3bqbcaUAEQgahFM7PoB3HtqLsm2c!/r" alt="" title="视频类会员"/>
+        <img class="tt" id="cqdd5" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3Kgf0cKVWXUxRWAFTOWpcmiiM1ILwUy6*Zs19R5O4qljNds*9pOQ9lTGhP0rCLfWRFTePZoEvDlljqqWAXSB1D4!/r" alt="" title="QQ音乐推广"/>
+        <img class="tt" id="cqdd6" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3INR3GGW0j3o2rib1ZJbOlIrg2iHN9KpGTfLOxjcZQcdeIfKkvu4dlgvqsfcX7tzLIcMFnTOSxPkD1EyHIWPAmg!/r" alt="" title="QQ会员（鲜花）"/>
+        <img class="tt" id="cqdd7" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3JEv7LxdTrlQfDEf0YgSY4LkM.zNBg9hlQXHWd9.RW.Nw0ROBRtqKgNU6DdHxtchEulpuctlKn8Y9mOiQIJM.tc!/r" alt="" title="百果园王卡"/>
+        <img class="tt" id="cqdd8" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3JUukdQvYhuynYW9io*Mosxa.6uiNe.ptu5HXAfVbCygLp7Kdpu*Wweod1jdjmecTohkVhvw.86EbZLCBYeMC0Q!/r" alt="" title="超级会员全家桶"/>
+        <img class="tt" id="cqdd9" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3O5o.LD6UleebNg2yzgyq*bTLsxecEMACBbTtJHIJNKo*ZaE8Zc2rYauKKXlpeo*UmKtLKTNAJJMoSFIqRGT.nY!/r" alt="" title="超级会员黄金版"/>
+        <img class="tt" id="cqdd10" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3J73hiYGTlcXRTAPBAKXQ8i0LvUnlD1nbZ4bpJ63i*ZOPRlSG0uzcQrNnlVbUkq1iZ22MG31Gz4KHZck.8NazY4!/r" alt="" title="超跑牛卡"/>
+        <img class="tt" id="cqdd11" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3AesYIGNZ9MWc7Ebz9L.*8nPBTeTZLQSOwUMOt4cNMpvw94CQpE.8GjPq9hxX0DPCC3gBLfD0OrpJK4XjmQGZqE!/r" alt="" title="春节-12个月超会"/>
+        <img class="tt" id="cqdd12" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3JazaUKkWI5KdVcPsWwIhD.hagNCX3k6GJbtj.hA8HTb5NlfDJkj8mRPjBElkdFOMjNYuHs4Y0Hc92Xnw0sDI.o!/r" alt="" title="抖音春节50元话费"/>
+        <img class="tt" id="cqdd13" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3Ew1Gj.JzXMIwNxDkCfc3p77K*8uBzHNGYSryakG1cr7rexvMNq3LNhfBnGHb9zOoLotz5HFpJ0TmFScaH8EvmM!/r" alt="" title="春节腾讯视频VIP"/>
+        <img class="tt" id="cqdd14" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3HfW6dMwOlYo3IMpq5mAvQK.FOP00qO2d3mdhy4upJXFkNRU3sOQKnb*G8PRPCfNgdGMgZaM0qU56C2sFPJf0Pw!/r" alt="" title="春节优酷VIP"/>
+        <img class="tt" id="cqdd15" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3FrbyXbB4oRfZpYrRRkRY6TKnU0YFYGHR5fG7xhgi1P5K6FG7CHxaPoXiI1YXBaVE8d3XdkPO2tKo1Xsl7vmhAI!/r" alt="" title="大王超会"/>
+        <img class="tt" id="cqdd16" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3AfkjGtzy3.5BErvIO07Z2olwl3Gtsc6XAO7B08MZf82aPhf1FOs43Asfbp3vsdN0X46wW*FKnEBrRII.LrHJAw!/r" alt="" title="分期乐活动"/>
+        <img class="tt" id="cqdd17" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3KMsf635V2jtKjIqYw6*Z83WvHtH8NXEAYdvm2eMZxKS9kdWVq8pTHHwo4YbXga7VlVmsdFotOGbUk*BpsqrpCs!/r" alt="" title="含100元礼包"/>
+        <img class="tt" id="cqdd18" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3F04QPoiPZCnIdpOpzcWSaFOLkRD35lE1zNOEsuedtq41ybH..HSsOMBEXfg7LORoZ5PLAZLhedBTO3CSzyD8CA!/r" alt="" title="互联网权益N选一"/>
+        <img class="tt" id="cqdd19" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3PATuXh.PLchl7LhcIm2AwP1kHmebqPkgd8Oq3v6UEgwp7rNxv85J373HmJ*rqjGvfHbje2Hj7ZH1ieKzzRZ8a4!/r" alt="" title="锦江专享权益活动"/>
+        <img class="tt" id="cqdd20" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3A4nYEsCti*VTtYjGsilK8PSnjrviJNJCdDi1wNKrP**eNZB3QtsEsLVd7MxTN8Q2pa83nW1EBXRAfVyC1yv*RA!/r" alt="" title="快手卡限时2400"/>
+        <img class="tt" id="cqdd21" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3IDJ53A4SQWH4.E49trg03bMoczJakQxVgGqs9o.bQcYVn8PpTYZxUw4J4czfW4QK.XmJs.c7AZQdJ9ArQRBNEw!/r" alt="" title="12个月腾讯视频VIP"/>
+        <img class="tt" id="cqdd22" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3D7Yh1EH.k*wwChsT.TVsWgslPB2FPPNoSkqwSgtfOeyXUWeGFBYNJLbonbrTuTs74PP92HmVQsmo9va7761E10!/r" alt="" title="3个月腾讯视频VIP"/>
+        <img class="tt" id="cqdd23" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3OhsgqvPxL0h4h.DT8itUuGPjZo.nMi06OjRHZhG4DPT5DR2Ko.V1gAsERn.DIkeeB2j1x7G5SV*XbBjsLANYF0!/r" alt="" title="领3个月腾讯视频VIP"/>
+        <img class="tt" id="cqdd24" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3HAcMh36xkQ779LizeQ0w7qRER1esBXipLiDHxpGT113NTdDRJe8RjA.7Dlb5cxYzr9bXJ2Kd6zgg2Jmy4hhWDk!/r" alt="" title="生日王卡超级版"/>
+        <img class="tt" id="cqdd25" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3GXRfQzWIG7yOEDBV3p6x237T0rSI*iA7r9jAVXl489s*5.BxYTa0I6GXBkJo2OMtCIs36eY1D1Lo5R9aYGAoVY!/r" alt="" title="首充送微云超级会员"/>
+        <img class="tt" id="cqdd26" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3H4S*HIUpLDjPe7z75vwYErOS05uYKfQhjNk5S86mQnbqw.jsgG36*QvqQ4*SDidUBfaPqtFRhyfGoJwuofnTbk!/r" alt="" title="送QQ超会"/>
+        <img class="tt" id="cqdd27" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3JzKcmXAIcZOzLAgPTk04yInlBQVA31lv8BuwdicyoFvKApmMlSeWnmua92JlWwCdRSSKThxqBGjM.sETtQWcMw!/r" alt="" title="送豪华绿钻"/>
+        <img class="tt" id="cqdd28" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3L*rpXguf9uFEiN.qJbDKD9qRJPGO*1DbCInBOHqRWTsUi6uU2xUvAMGXHUyWZVZMDWgL*tp7D4T01W1Dr3*QTA!/r" alt="" title="送酷狗VIP"/>
+        <img class="tt" id="cqdd29" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3MI7VHKuCkKsHVpeiAmNddiVlGSl9xXfNB*1GYdQW9bEKVHXqTTIYNODDLAg9j1bbJu15DAKAXC67zply5*RBaU!/r" alt="" title="腾讯视频VIP"/>
+        <img class="tt" id="cqdd30" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3NdX3hI93hNo8KI3IgZrzKZPdyjaGSE*fn8tkBEjocsOtpoO0dTObuNo0DLu38HUM*5LqeKTh6taFvaD0f0MdKo!/r" alt="" title="天神-不首冲"/>
+        <img class="tt" id="cqdd31" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3MOg.j51tC*lg3wlmjG4yD7GCAYLba.AOJVfe2dvm2H8AurfRwP7SoYd*NlUTkzImDTODp6NyxLWqKxdxveePA0!/r" alt="" title="王卡-不首冲"/>
+        <img class="tt" id="cqdd32" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3OfA6fooYHyYsUMavJnGgzwmSLsU7uGfxfglt5KuGI6LebkeC0H3UbSgmDrZlkaY21G*Fh17KShPmCOOQUJtZ9o!/r" alt="" title="快手卡享手游加速"/>
+        <img class="tt" id="cqdd33" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3LmdmSrE62bcdkWEDHRJ7cM4cJhqFSjsJ7O1LYyPut0BOKQ6.70eHjlAkXdi2ybKGKkY7wlxFoZyuwPjUff8qU8!/r" alt="" title="尊享权益包（黄金版）"/>
+        <img class="tt" id="cqdd34" src="http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3FYF1qCjC7ANaQiTJxWMG9Zu1h7atHDgClq*1jzM3NRtS21nmhnkA*3Ea*IxpHmPhJ*hpwS.0XZn1LV8W*WxjOE!/r" alt="" title="分享礼活动3选1"/>
 
     </div>
     <script >
@@ -203,3 +267,9 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
